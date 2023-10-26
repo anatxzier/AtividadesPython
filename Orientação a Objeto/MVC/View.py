@@ -20,9 +20,10 @@ while sair == 0:
             os.system("pause")
             os.system("cls")
         case "3":
-            tarefa_Antiga = input("Digite a tarefa antiga")
+            listarTarefa = ControllerListarTarefa()
             nova_tarefa = input("Digite a nova tarefa \n")
-            tarefaAlterada = ControllerAdicionarTarefa(tarefa)
+            indice = input("Digite o índice da tarefa que deseja excluir")
+            tarefaAlterada = ControllerMudarTarefa(nova_tarefa, indice, "A")
             os.system("pause")
             os.system("cls")
 
