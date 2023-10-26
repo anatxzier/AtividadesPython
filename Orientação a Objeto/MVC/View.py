@@ -3,21 +3,39 @@ import os
 
 sair = 0
 while sair == 0:
-    print("-> SOFTWARE TO-DO <- \n \n [1] ADICIONAR TAREFA \n [2] LISTAR TAREFA \n [3] EXCLUIR TAREFA \n [4] SAIR \n ")
+    print("-> SOFTWARE TO-DO <- \n \n [1] ADICIONAR TAREFA \n [2] LISTAR TAREFA \n [3] ALTERAR TAREFA \n [4] EXCLUIR \n [5] SAIR ")
     menu = input("QUAL OPÇÃO DESEJA? \n ")
     os.system("cls")
 
     match menu:
         case "1":
+            #adicionar tarefa
             tarefa = input("DIGITE A TAREFA \n ")
             adicionarTarefa = ControllerAdicionarTarefa(tarefa)
             os.system("pause")
             os.system("cls")            
         case "2":
+            #listar tarefas
             listarTarefa = ControllerListarTarefa()
             os.system("pause")
             os.system("cls")
         case "3":
+            #alterar tarefas
+            nova_tarefa = input("Digite a nova tarefa \n")
+            tarefaAlterada = ControllerAdicionarTarefa()
+            os.system("pause")
+            os.system("cls")
+
+        case"4":
+            #concluir tarefa
+            pass
+
+        case "5":
+            #listar tarefas concluidas
+            pass
+
+        case "6":
+            #excluir tarefas
             listarTarefa = ControllerListarTarefa()
             excluir = input("Qual o índice da tarefa que deseja excluir? \n ")
             excluirTarefa = ControllerExcluirTarefa (excluir)
@@ -26,7 +44,8 @@ while sair == 0:
             listarTarefa = ControllerListarTarefa()
             os.system("pause")
             os.system("cls")    
-        case "4":
+
+        case "7":
             print("SAINDO...")
             break
         case _:
