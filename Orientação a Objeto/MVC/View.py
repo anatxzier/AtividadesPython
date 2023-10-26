@@ -20,9 +20,9 @@ while sair == 0:
             os.system("pause")
             os.system("cls")
         case "3":
-            #alterar tarefas
+            tarefa_Antiga = input("Digite a tarefa antiga")
             nova_tarefa = input("Digite a nova tarefa \n")
-            tarefaAlterada = ControllerAdicionarTarefa()
+            tarefaAlterada = ControllerAdicionarTarefa(tarefa)
             os.system("pause")
             os.system("cls")
 
